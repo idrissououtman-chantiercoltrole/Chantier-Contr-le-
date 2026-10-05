@@ -85,4 +85,16 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             )
         }
     }
+
+    fun terminerAction(action: ActionSuivi) {
+        viewModelScope.launch {
+            base.actionDao().modifier(
+                action.copy(
+                    statut = "Terminée",
+                    modifieLe = System.currentTimeMillis(),
+                    motifModification = "Marquée terminée"
+                )
+            )
+        }
+    }
 }
