@@ -12,4 +12,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ChantierControle"
-include(":application")
+include(":app")
