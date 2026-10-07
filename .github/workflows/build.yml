@@ -24,10 +24,10 @@ jobs:
           gradle-version: 8.9
 
       - name: Fabriquer l'APK
-        run:  gradle :application:assembleDebug --stacktrace
+        run:  gradle :app:assembleDebug --stacktrace
 
       - name: Deposer l'APK
         uses: actions/upload-artifact@v4
         with:
           name: Chantier-Controle-APK
-          path: application/build/outputs/apk/debug
+          path: app/build/outputs/apk/debug
